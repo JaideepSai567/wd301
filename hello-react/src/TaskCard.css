@@ -1,0 +1,10 @@
+.TaskItem {
+    border: 2px solid rgb(15 23 42);
+    border-radius: 4px;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    text-align: left;
+  }
+.card-border{
+    border: 2px solid #99AABB;
+  }
