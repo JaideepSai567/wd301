@@ -1,7 +1,26 @@
 import React from "react"
 import TaskCard from "./TaskCard"
+interface pending{
+  title:string,
+  dueDate: string,
+  assigneeName: string,
+}
+
+interface done{
+  title:string,
+  dueDate: string,
+  assigneeName: string,
+}
+
+
 
 function App() {
+  
+ let pen1: pending = {title:"Build the website with static content",dueDate:"10th Aprail",assigneeName:"Rohit S"}
+ let pen2: pending = {title:"Add a blog",dueDate:"22nd March",assigneeName:"Rohit M"}
+
+ let done1: pending = {title:"Design the mockup",dueDate:"10th Aprail",assigneeName:"Rohit M"}
+ let done2: pending = {title:"Get the approval from principal",dueDate:"20th Aprail",assigneeName:"Ajay S"}
  
 
   return (
@@ -16,14 +35,14 @@ function App() {
 
           <div className="card-border rounded border-slate-300 p-4 mx-2">
             <h1 className="text-gray-500 text-bold text-lg text-center ">Pending</h1>
-            <TaskCard title="Build the website with static content" dueDate="10th Aprail" assigneeName="Rohit S"/>
-            <TaskCard title="Add a blog" dueDate="22nd March" assigneeName="Rohit M"/>
+            <TaskCard {...pen1}/>
+            <TaskCard {...pen2}/>
           </div>
 
           <div className="card-border rounded border-slate-300 p-4 mx-2">
             <h1 className="text-gray-500 text-bold text-lg text-center ">Done</h1>
-            <TaskCard title="Design the mockup" completedAtDate="10th Aprail" assigneeName="Rohit M"/>
-            <TaskCard title="Get the approval from principal" completedAtDate="20th Aprail" assigneeName="Ajay S"/>
+            <TaskCard {...done1}/>
+            <TaskCard {...done2}/>
           </div>
         </div>
       </div>
